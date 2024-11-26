@@ -1,0 +1,11 @@
+{% extends 'quiz/base.html' %}
+
+{% block main %}
+
+Deleting user - {{ object.username }} - {{ object.first_name }} {{ object.last_name }} ??
+<form method="POST">
+{% csrf_token %}
+  <button type="submit">Confirm</button>
+</form>
+
+{% endblock %}
